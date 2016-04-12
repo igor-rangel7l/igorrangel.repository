@@ -14,7 +14,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.igorlista" name="Igor Lista" version="0.0.3" provider-name="Igor Rangel e Cleiton Leonel Creton">
+<addon id="plugin.video.igorlista" name="Igor Lista" version="0.0.2" provider-name="Igor Rangel e Cleiton Leonel Creton">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.urlresolver" version="2.10.8"/>

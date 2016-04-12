@@ -1,4 +1,6 @@
 
 Versão inicial 0.0.1
-
 Aguardem atualizações e novidades!!!
+
+Versão inicial 0.0.2
+Canais master tv e canais IPTV juntos na mesma pagina !!!
