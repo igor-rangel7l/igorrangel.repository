@@ -114,21 +114,17 @@ def player_lista_series(url):
                 pass
 		xbmc.executebuiltin("Container.SetViewMode(500)")
 
-def futebol_ao_vivo_jogos(url):
-      for line in urllib2.urlopen(url_base+'0BxN0DzFjIeCaTUdfWFFGcTZHRlk').readlines():
-            params = line.split(',')
-            print params
-            try:
-                  nome = params[0]
-                  print 'Nome: ' + nome
-                  rtmp = params[1]
-                  print 'Link: ' + rtmp
-                  img = params[2].replace(' http','http').replace(' https','https')
-                  print 'Img: ' + img
-                  addDir(nome,rtmp,1,img)
-            except:
-                pass
-		xbmc.executebuiltin("Container.SetViewMode(500)")
+def futebol_ao_vivo_jogos(name,url,iconimage):
+	html = gethtml(base64.b64decode('aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vdWM/ZXhwb3J0PWRvd25sb2FkJmlkPTBCeE4wRHpGakllQ2FUVWRmV0ZGR2NUWkhSbGs='))
+	soup = html.find("div",{"class":"canais"})
+	canais = soup.findAll("li")
+	for canal in canais:
+		titulo = canal.a.text
+		url = canal.a["href"]
+		iconimage = canal.img["src"]
+		addDir("[B]"+titulo.encode('utf-8')+"[/B]",url,10,iconimage,False)
+        xbmcplugin.setContent(int(sys.argv[1]), 'episodies')
+	xbmc.executebuiltin('Container.SetViewMode(500)')
 
 def canais_master(name,url,iconimage):
 	html = gethtml(url)
@@ -489,7 +485,7 @@ elif mode==13:
 	
 elif mode==14:
     print ""
-    futebol_ao_vivo_jogos(url)
+    futebol_ao_vivo_jogos(name,url,iconimage)
     
 elif mode==15:
     print ""
