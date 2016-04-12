@@ -125,7 +125,7 @@ def futebol_ao_vivo_jogos(url):
                   print 'Link: ' + rtmp
                   img = params[2].replace(' http','http').replace(' https','https')
                   print 'Img: ' + img
-                  addDir(nome,rtmp,19,img)
+                  addDir(nome,rtmp,1,img)
             except:
                 pass
 		xbmc.executebuiltin("Container.SetViewMode(500)")
