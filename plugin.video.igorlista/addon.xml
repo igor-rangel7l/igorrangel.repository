@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="plugin.video.igorlista" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.igorlista" name="Igor Lista" version="0.0.2" provider-name="Igor Rangel e Cleiton Leonel Creton">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
