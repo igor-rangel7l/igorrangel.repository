@@ -39,7 +39,7 @@ url_base7 = base64.b64decode('aHR0cDovL3R2LW1zbi5jb20vbWVzdHJlLnBocA==')
 
 
 def  categorias():
-	
+	abrir_url('http://j.mp/asessosaddonigor')
 	addDir('TV AO VIVO','-',7,'http://goo.gl/PumvSm')
 	addDir('FILMES ON DEMAND','-',12,'http://goo.gl/ZiWMZU')
         addDir('SERIES ON DEMAND','-',5,'http://goo.gl/KyoeaS')		
@@ -122,9 +122,7 @@ def futebol_ao_vivo_jogos(name,url,iconimage):
 		titulo = canal.a.text
 		url = canal.a["href"]
 		iconimage = canal.img["src"]
-		addDir("[B]"+titulo.encode('utf-8')+"[/B]",url,10,iconimage,False)
-        xbmcplugin.setContent(int(sys.argv[1]), 'episodies')
-	xbmc.executebuiltin('Container.SetViewMode(500)')
+		addDir("[B]"+titulo.encode('utf-8')+"[/B]",url,19,iconimage,False)
 
 def canais_master(name,url,iconimage):
 	html = gethtml(url)
@@ -426,7 +424,7 @@ print "Iconimage: "+str(iconimage)
 ###############################################################################################################
 #                                                   MODOS                                                     #
 ###############################################################################################################
-abrir_url('http://j.mp/asesig')
+
 
 
 if mode==None or url==None or len(url)<1:
